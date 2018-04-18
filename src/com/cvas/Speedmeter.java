@@ -38,7 +38,8 @@ public class Speedmeter implements Runnable{
             try {
 
                 long count = Files.lines(Paths.get(Configuration.IO_FILE)).count();
-                String ms =Timer.getTimer().currentTimeMillisec() + ": " + count + "\n";
+                String meter1 = Timer.getTimer().currentTimeMillisec();
+                String ms = meter1 + Configuration.DEF_STRING_TOKEN + count + "\n";
                 LineNumberReader lnr = new LineNumberReader(new FileReader(new File(Configuration.MEASURE_FILE)));
                 lnr.skip(Long.MAX_VALUE);
 
@@ -52,7 +53,7 @@ public class Speedmeter implements Runnable{
                 }
                 Thread.sleep(Configuration.MEASURE_INTERVAL_MILLISEC);
             } catch (IOException e) {
-                e.printStackTrace();
+                System.out.println(e.getMessage());
             } catch (InterruptedException e) {
                 System.out.println(e.getMessage());
             }
