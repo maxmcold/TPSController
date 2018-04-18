@@ -1,6 +1,4 @@
-package com.cvas.utils;
-
-import com.cvas.Configuration;
+package com.mdv.utils;
 
 import java.io.*;
 

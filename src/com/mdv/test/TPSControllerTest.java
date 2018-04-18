@@ -1,8 +1,8 @@
-package com.cvas.test;
+package com.mdv.test;
 
-import com.cvas.BulkPublisher;
-import com.cvas.Controller;
-import com.cvas.Speedmeter;
+import com.mdv.throttle.BulkPublisher;
+import com.mdv.throttle.Controller;
+import com.mdv.throttle.Speedmeter;
 
 public class TPSControllerTest {
 

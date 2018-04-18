@@ -1,6 +1,6 @@
-package com.cvas.test;
+package com.mdv.test;
 
-import com.cvas.Configuration;
+import com.mdv.throttle.Configuration;
 
 import java.io.*;
 

@@ -1,4 +1,4 @@
-package com.cvas;
+package com.mdv.throttle;
 
 
 import java.io.*;
@@ -31,7 +31,8 @@ public class Publisher implements Runnable{
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                out.println("Message: " + threadName + ", " + i++);
+                out.append("Message: " + threadName + ", " + (i++) + "\n");
+                out.flush();
                 // Let the thread sleep for a while.
                 out.close();
                 Thread.sleep(Configuration.PUBLISH_INTERVAL_MILLISEC);

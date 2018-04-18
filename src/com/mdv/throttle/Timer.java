@@ -1,4 +1,4 @@
-package com.cvas;
+package com.mdv.throttle;
 
 public class Timer {
 

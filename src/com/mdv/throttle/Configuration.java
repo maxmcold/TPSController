@@ -1,9 +1,9 @@
-package com.cvas;
+package com.mdv.throttle;
 
 public class Configuration {
 
     public static String IO_FILE = "./test.io.txt";
-    static int PUBLISH_INTERVAL_MILLISEC = 1000;
+    static int PUBLISH_INTERVAL_MILLISEC = 3000;
     public static int SUBSCRIBE_INTERVAL_MILLISEC = 50;
     static int MEASURE_INTERVAL_MILLISEC = 10;
     public static int REFERENCE_TPS = 200;

@@ -1,6 +1,4 @@
-package com.cvas.test;
-
-import com.cvas.ParentConflictException;
+package com.mdv.data;
 
 public class Node {
 

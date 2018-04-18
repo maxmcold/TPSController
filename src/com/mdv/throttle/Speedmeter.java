@@ -1,15 +1,11 @@
-package com.cvas;
+package com.mdv.throttle;
 
-import com.cvas.utils.FilePopper;
-import sun.security.krb5.Config;
+import com.mdv.utils.FilePopper;
 
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Hashtable;
-import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
 public class Speedmeter implements Runnable{

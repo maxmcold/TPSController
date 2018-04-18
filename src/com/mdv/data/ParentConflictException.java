@@ -1,4 +1,4 @@
-package com.cvas;
+package com.mdv.data;
 
 public class ParentConflictException extends Exception{
 
