@@ -1,15 +1,30 @@
 package com.cvas.test;
 
-import com.cvas.*;
-
-import java.io.*;
-import java.util.*;
-
 public class TestMain {
 
     public static void main(String[] args) {
-        
-         Speedmeter sm = new Speedmeter();
+
+
+        Node a_node = new Node("a",true);
+
+        Node b_node = a_node.insertLeft("b");
+
+        Node c_node = a_node.insertRight("c");
+
+        Node d_node = b_node.insertRight("d");
+
+        Node e_node = c_node.insertLeft("e");
+        Node f_node = a_node.insertRight("f");
+
+        System.out.println(a_node.value);
+
+
+
+
+
+
+
+        /**Speedmeter sm = new Speedmeter();
 
         sm.start();
 
@@ -29,7 +44,11 @@ public class TestMain {
         //tmm.testshortc(null);
     }
 
+
+
     public static int getMessageLength(String message, boolean hasUnicode) {
+
+
         System.out.println("Message Length: "+message.length());
         int messageLength;
         Boolean test = (message.length() <= 70);
@@ -46,6 +65,7 @@ public class TestMain {
 
 
     public void testshortc(Object o){
+
         if ((o != null) && (o.hashCode() != 1)){
             System.out.println(o.toString());
         }

@@ -22,8 +22,7 @@ public class Publisher implements Runnable{
 
     public void run() {
 
-        //out.println("Running " +  threadName );
-        try {
+         try {
             int i = 1;
             while(true) {
                 try {
