@@ -47,7 +47,7 @@ public class Subscriber implements Runnable {
                 }
                 raf.setLength(writePosition);
                 raf.close();
-                out.println("read 1 line from "+threadName+" --- waiting "+ Configuration.SUBSCRIBE_INTERVAL_MILLISEC+"  millisecs...");
+                //out.println("read 1 line from "+threadName+" --- waiting "+ Configuration.SUBSCRIBE_INTERVAL_MILLISEC+"  millisecs...");
                 Thread.sleep(Configuration.SUBSCRIBE_INTERVAL_MILLISEC);
                 i++;
             }
@@ -60,7 +60,7 @@ public class Subscriber implements Runnable {
     }
 
     public void start () {
-        out.println("Starting " +  threadName );
+        //out.println("Starting " +  threadName );
         if (t == null) {
             t = new Thread (this, threadName);
             t.setDaemon(true);

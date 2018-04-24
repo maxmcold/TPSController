@@ -19,15 +19,17 @@ public class Publisher implements Runnable{
         //out.println("Creating " +  threadName );
 
     }
-
+    public String getName(){
+        return this.threadName;
+    }
     public void run() {
-
+            //TODO: protect from concurrent writing. Both log and out
          try {
             int i = 1;
             while(true) {
                 try {
-                    out = new PrintWriter(new BufferedWriter(new FileWriter(f,true)), true);
-                    log = new PrintWriter(new BufferedWriter(new FileWriter(l,true)), true);
+                    out = new PrintWriter(new BufferedWriter(new FileWriter(f,true)), false);
+                    log = new PrintWriter(new BufferedWriter(new FileWriter(l,true)), false);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -41,7 +43,7 @@ public class Publisher implements Runnable{
         }catch (InterruptedException e) {
             log.println("Thread " +  threadName + " interrupted.");
         }
-        log.println("Thread " +  threadName + " exiting.");
+        //log.println("Thread " +  threadName + " exiting.");
         log.close();
     }
 

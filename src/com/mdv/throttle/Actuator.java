@@ -2,11 +2,11 @@ package com.mdv.throttle;
 
 public class Actuator {
 
-    public void increase(){
+    public void increasePublisher(){
 
 
     }
-    public void decrease(){
+    public void decreasePublisher(){
 
 
     }
