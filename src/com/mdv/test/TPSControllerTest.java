@@ -18,7 +18,7 @@ public class TPSControllerTest {
         Speedmeter sm = new Speedmeter();
         sm.start();
 
-        BulkSubscriber.BulkPublisher bp = new BulkSubscriber.BulkPublisher(10);
+        BulkPublisher bp = new BulkPublisher(10);
         bp.setDaemon(false);
         bp.start();
 
