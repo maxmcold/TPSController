@@ -1,5 +1,6 @@
 package com.mdv.test;
 
+import com.mdv.io.Queue;
 import com.mdv.throttle.Configuration;
 
 import java.io.*;
@@ -10,8 +11,11 @@ public class Subscriber implements Runnable {
     private String threadName;
     File f = new File(Configuration.LOG_FILE);
     PrintWriter out;
+    Queue queue;
 
-    public Subscriber( String name) {
+
+    public Subscriber( String name, Queue q) {
+        this.queue = q;
         threadName = name;
         try {
             out = new PrintWriter(new BufferedWriter(new FileWriter(f,true)), true);
@@ -19,37 +23,19 @@ public class Subscriber implements Runnable {
             e.printStackTrace();
         }//*/
 
-        //out.println("Creating " +  threadName );
+
 
     }
 
     public void run() {
 
         try {
-            int i = 1;
+
 
             while (true) {
-                RandomAccessFile raf = new RandomAccessFile(Configuration.IO_FILE, "rw");
-                //Initial write position
-                long writePosition = raf.getFilePointer();
-                raf.readLine();
-                // Shift the next lines upwards.
-                long readPosition = raf.getFilePointer();
-
-                byte[] buff = new byte[1024];
-                int n;
-                while (-1 != (n = raf.read(buff))) {
-                    raf.seek(writePosition);
-                    raf.write(buff, 0, n);
-                    readPosition += n;
-                    writePosition += n;
-                    raf.seek(readPosition);
-                }
-                raf.setLength(writePosition);
-                raf.close();
-                //out.println("read 1 line from "+threadName+" --- waiting "+ Configuration.SUBSCRIBE_INTERVAL_MILLISEC+"  millisecs...");
+                this.popline();
                 Thread.sleep(Configuration.SUBSCRIBE_INTERVAL_MILLISEC);
-                i++;
+
             }
 
         } catch (InterruptedException e) {
@@ -58,7 +44,18 @@ public class Subscriber implements Runnable {
             e.printStackTrace();
         }
     }
+    //implements FIFO logic
+    private synchronized void popline() throws IOException{
+        this.queue.popMessage();
 
+    }
+
+    //Implements LIFO logic
+    private synchronized void getline() throws IOException{
+        this.queue.getMessage();
+
+
+    }
     public void start () {
         //out.println("Starting " +  threadName );
         if (t == null) {

@@ -1,5 +1,7 @@
 package com.mdv.throttle;
 
+import com.mdv.logging.Logger;
+
 import java.io.*;
 import java.text.ParseException;
 
@@ -9,6 +11,7 @@ public class Controller implements Runnable {
     private String threadName;
     private Speedmeter sm;
     private Controllable controllable;
+    Logger logger = new Logger();
 
     public Controller(Speedmeter speedmeter,Controllable bp) {
 
@@ -17,6 +20,7 @@ public class Controller implements Runnable {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+
         this.sm = speedmeter;
         this.controllable = bp;
 
@@ -47,7 +51,7 @@ public class Controller implements Runnable {
             try {
                 float tpsArray[] = this.evaluateCurrentTPS();
 
-                //print array on file
+
                 //TODO: temporary code, find a way to log it somewhere else
 
                 PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(Configuration.AVG_SPEED_LOG_FILE,true)), true);
@@ -60,17 +64,19 @@ public class Controller implements Runnable {
                         countAvgItems++;
                     }
 
-                    out.append(String.valueOf(tpsArray[i]) + " ");
-                    out.flush();
+                    //out.append(String.valueOf(tpsArray[i]) + " ");
+                    //out.flush();
                 }
                 float avg = sum / countAvgItems;
-                out.print(" : avg="+ avg + "\n");
+                out.print(" => avgTPS="+ avg + "\n");
                 out.close();
 
                 //TODO: for now check only average TPS
-                Logger logger = new Logger();
+
                 float diff = avg-Configuration.REFERENCE_TPS;
                 logger.log("AvgTPS/Reference:"+avg+"/"+Configuration.REFERENCE_TPS+ " Difference:" + diff);
+
+
                 //TODO: the most simple algorithm for now: add/remove one publisher
                 if (diff > 0 && diff > Configuration.DIFF_TOLERANCE) { //too high TPS
                     this.controllable.decrease();
@@ -82,7 +88,6 @@ public class Controller implements Runnable {
                     logger.log("Too much low TPS increasing one Thread...");
 
                 }
-
 
 
 
@@ -120,6 +125,12 @@ public class Controller implements Runnable {
         PrintWriter writer = new PrintWriter(Configuration.MEASURE_FILE);
         writer.print("");
         writer.close();
+
+        writer = new PrintWriter(Configuration.AVG_SPEED_LOG_FILE);
+        writer.print("");
+        writer.close();
+
+
 
     }
 

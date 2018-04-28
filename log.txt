@@ -1,1110 +1,331 @@
-AvgTPS/Reference:NaN/10.0 Difference:NaN
-AvgTPS/Reference:NaN/10.0 Difference:NaN
-AvgTPS/Reference:6.0/10.0 Difference:-4.0
-adding thread pub-5
-Publisher Stack size6
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:6.0/10.0 Difference:-4.0
-adding thread pub-6
-Publisher Stack size7
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:6.0/10.0 Difference:-4.0
-adding thread pub-7
-Publisher Stack size8
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:6.3333335/10.0 Difference:-3.6666665
+
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:10.0/5.0 Difference:5.0
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:9.5/5.0 Difference:4.5
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:6.25/5.0 Difference:1.25
+AvgTPS/Reference:5.1666665/5.0 Difference:0.16666651
+AvgTPS/Reference:4.625/5.0 Difference:-0.375
+AvgTPS/Reference:4.3/5.0 Difference:-0.6999998
+AvgTPS/Reference:4.0833335/5.0 Difference:-0.9166665
+AvgTPS/Reference:3.4615386/5.0 Difference:-1.5384614
+AvgTPS/Reference:3.0/5.0 Difference:-2.0
+AvgTPS/Reference:3.0/5.0 Difference:-2.0
+AvgTPS/Reference:3.0/5.0 Difference:-2.0
+AvgTPS/Reference:3.0/5.0 Difference:-2.0
+AvgTPS/Reference:3.0/5.0 Difference:-2.0
+AvgTPS/Reference:3.0/5.0 Difference:-2.0
+AvgTPS/Reference:3.0/5.0 Difference:-2.0
+AvgTPS/Reference:3.0/5.0 Difference:-2.0
+AvgTPS/Reference:3.0/5.0 Difference:-2.0
+AvgTPS/Reference:3.0/5.0 Difference:-2.0
+AvgTPS/Reference:3.0/5.0 Difference:-2.0
+AvgTPS/Reference:3.0/5.0 Difference:-2.0
+AvgTPS/Reference:3.0/5.0 Difference:-2.0
+AvgTPS/Reference:3.0/5.0 Difference:-2.0
+AvgTPS/Reference:3.0/5.0 Difference:-2.0
+AvgTPS/Reference:0.33333334/5.0 Difference:-4.6666665
 adding thread pub-8
-Publisher Stack size9
+Publisher Stack size: 9
 Too much low TPS increasing one Thread...
-AvgTPS/Reference:6.3333335/10.0 Difference:-3.6666665
+AvgTPS/Reference:-7.5/5.0 Difference:-12.5
 adding thread pub-9
-Publisher Stack size10
+Publisher Stack size: 10
 Too much low TPS increasing one Thread...
-AvgTPS/Reference:6.5/10.0 Difference:-3.5
+AvgTPS/Reference:-8.333333/5.0 Difference:-13.333333
 adding thread pub-10
-Publisher Stack size11
+Publisher Stack size: 11
 Too much low TPS increasing one Thread...
-AvgTPS/Reference:6.2/10.0 Difference:-3.8000002
+AvgTPS/Reference:-5.0/5.0 Difference:-10.0
 adding thread pub-11
-Publisher Stack size12
+Publisher Stack size: 12
 Too much low TPS increasing one Thread...
-AvgTPS/Reference:6.2/10.0 Difference:-3.8000002
+AvgTPS/Reference:-3.0/5.0 Difference:-8.0
 adding thread pub-12
-Publisher Stack size13
+Publisher Stack size: 13
 Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.5/10.0 Difference:-4.5
+AvgTPS/Reference:-1.8888888/5.0 Difference:-6.888889
 adding thread pub-13
-Publisher Stack size14
+Publisher Stack size: 14
 Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.5/10.0 Difference:-4.5
+AvgTPS/Reference:-1.1818181/5.0 Difference:-6.181818
 adding thread pub-14
-Publisher Stack size15
+Publisher Stack size: 15
 Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.571429/10.0 Difference:-4.428571
+AvgTPS/Reference:-0.6923077/5.0 Difference:-5.6923075
 adding thread pub-15
-Publisher Stack size16
+Publisher Stack size: 16
 Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.375/10.0 Difference:-4.625
+AvgTPS/Reference:0.0/5.0 Difference:-5.0
 adding thread pub-16
-Publisher Stack size17
+Publisher Stack size: 17
 Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.375/10.0 Difference:-4.625
+AvgTPS/Reference:0.93333334/5.0 Difference:-4.0666666
 adding thread pub-17
-Publisher Stack size18
+Publisher Stack size: 18
 Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.2222223/10.0 Difference:-4.7777777
+AvgTPS/Reference:1.6666666/5.0 Difference:-3.3333335
 adding thread pub-18
-Publisher Stack size19
+Publisher Stack size: 19
 Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.2222223/10.0 Difference:-4.7777777
+AvgTPS/Reference:2.142857/5.0 Difference:-2.857143
 adding thread pub-19
-Publisher Stack size20
+Publisher Stack size: 20
 Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.2/10.0 Difference:-4.8
+AvgTPS/Reference:3.4285715/5.0 Difference:-1.5714285
+AvgTPS/Reference:5.142857/5.0 Difference:0.14285707
+AvgTPS/Reference:6.857143/5.0 Difference:1.8571429
+AvgTPS/Reference:8.571428/5.0 Difference:3.5714283
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:9.666667/5.0 Difference:4.666667
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:11.2/5.0 Difference:6.2
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:13.25/5.0 Difference:8.25
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:14.0/5.0 Difference:9.0
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:14.0/5.0 Difference:9.0
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:14.0/5.0 Difference:9.0
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:-10.0/5.0 Difference:-15.0
+adding thread pub-13
+Publisher Stack size: 14
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:-10.0/5.0 Difference:-15.0
+adding thread pub-14
+Publisher Stack size: 15
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:-10.0/5.0 Difference:-15.0
+adding thread pub-15
+Publisher Stack size: 16
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:-10.0/5.0 Difference:-15.0
+adding thread pub-16
+Publisher Stack size: 17
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:-10.0/5.0 Difference:-15.0
+adding thread pub-17
+Publisher Stack size: 18
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:-10.0/5.0 Difference:-15.0
+adding thread pub-18
+Publisher Stack size: 19
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:-9.285714/5.0 Difference:-14.285714
+adding thread pub-19
+Publisher Stack size: 20
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:-6.7777777/5.0 Difference:-11.777778
 adding thread pub-20
-Publisher Stack size21
+Publisher Stack size: 21
 Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.7272725/10.0 Difference:-4.2727275
+AvgTPS/Reference:-4.7/5.0 Difference:-9.7
 adding thread pub-21
-Publisher Stack size22
+Publisher Stack size: 22
 Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.7272725/10.0 Difference:-4.2727275
+AvgTPS/Reference:-3.0/5.0 Difference:-8.0
 adding thread pub-22
-Publisher Stack size23
+Publisher Stack size: 23
 Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.75/10.0 Difference:-4.25
+AvgTPS/Reference:-0.083333336/5.0 Difference:-5.0833335
 adding thread pub-23
-Publisher Stack size24
+Publisher Stack size: 24
 Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.75/10.0 Difference:-4.25
+AvgTPS/Reference:3.1538463/5.0 Difference:-1.8461537
+AvgTPS/Reference:5.928571/5.0 Difference:0.9285712
+AvgTPS/Reference:8.333333/5.0 Difference:3.333333
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:10.333333/5.0 Difference:5.333333
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:12.066667/5.0 Difference:7.0666666
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:13.666667/5.0 Difference:8.666667
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:14.466666/5.0 Difference:9.466666
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:13.0/5.0 Difference:8.0
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:12.538462/5.0 Difference:7.5384617
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:11.909091/5.0 Difference:6.909091
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:11.0/5.0 Difference:6.0
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:9.714286/5.0 Difference:4.714286
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:7.8/5.0 Difference:2.8000002
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:5.0/5.0 Difference:0.0
+AvgTPS/Reference:3.0/5.0 Difference:-2.0
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:-1.0/5.0 Difference:-6.0
+adding thread pub-13
+Publisher Stack size: 14
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:-5.0/5.0 Difference:-10.0
+adding thread pub-14
+Publisher Stack size: 15
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:-6.6666665/5.0 Difference:-11.666666
+adding thread pub-15
+Publisher Stack size: 16
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:-7.5/5.0 Difference:-12.5
+adding thread pub-16
+Publisher Stack size: 17
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:-8.0/5.0 Difference:-13.0
+adding thread pub-17
+Publisher Stack size: 18
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:-8.333333/5.0 Difference:-13.333333
+adding thread pub-18
+Publisher Stack size: 19
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:-1.75/5.0 Difference:-6.75
+adding thread pub-19
+Publisher Stack size: 20
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:2.4/5.0 Difference:-2.6
+adding thread pub-20
+Publisher Stack size: 21
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:5.909091/5.0 Difference:0.909091
+AvgTPS/Reference:9.5/5.0 Difference:4.5
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:12.538462/5.0 Difference:7.5384617
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:14.714286/5.0 Difference:9.714286
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:16.266666/5.0 Difference:11.266666
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:17.071428/5.0 Difference:12.071428
+Too much hig TPS decreasing one Thread...
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:-1.0/5.0 Difference:-6.0
+adding thread pub-10
+Publisher Stack size: 11
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:-1.0/5.0 Difference:-6.0
+adding thread pub-11
+Publisher Stack size: 12
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:0.0/5.0 Difference:-5.0
+adding thread pub-12
+Publisher Stack size: 13
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:0.33333334/5.0 Difference:-4.6666665
+adding thread pub-13
+Publisher Stack size: 14
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:0.875/5.0 Difference:-4.125
+adding thread pub-14
+Publisher Stack size: 15
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:1.5/5.0 Difference:-3.5
+adding thread pub-15
+Publisher Stack size: 16
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:2.0833333/5.0 Difference:-2.9166667
+adding thread pub-16
+Publisher Stack size: 17
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:2.5/5.0 Difference:-2.5
+adding thread pub-17
+Publisher Stack size: 18
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:2.8181818/5.0 Difference:-2.1818182
+adding thread pub-18
+Publisher Stack size: 19
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:3.2222223/5.0 Difference:-1.7777777
+AvgTPS/Reference:3.857143/5.0 Difference:-1.1428571
+AvgTPS/Reference:4.4/5.0 Difference:-0.5999999
+AvgTPS/Reference:4.6666665/5.0 Difference:-0.3333335
+AvgTPS/Reference:4.0/5.0 Difference:-1.0
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:1.0/5.0 Difference:-4.0
+adding thread pub-19
+Publisher Stack size: 20
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:2.75/5.0 Difference:-2.25
+adding thread pub-20
+Publisher Stack size: 21
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:3.0/5.0 Difference:-2.0
+AvgTPS/Reference:1.5714285/5.0 Difference:-3.4285715
+adding thread pub-21
+Publisher Stack size: 22
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:-0.33333334/5.0 Difference:-5.3333335
+adding thread pub-22
+Publisher Stack size: 23
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:-1.6363636/5.0 Difference:-6.6363635
+adding thread pub-23
+Publisher Stack size: 24
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:-1.75/5.0 Difference:-6.75
 adding thread pub-24
-Publisher Stack size25
+Publisher Stack size: 25
 Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.6923075/10.0 Difference:-4.3076925
+AvgTPS/Reference:-2.0/5.0 Difference:-7.0
 adding thread pub-25
-Publisher Stack size26
+Publisher Stack size: 26
 Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.785714/10.0 Difference:-4.214286
+AvgTPS/Reference:-2.8888888/5.0 Difference:-7.888889
 adding thread pub-26
-Publisher Stack size27
+Publisher Stack size: 27
 Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.785714/10.0 Difference:-4.214286
+AvgTPS/Reference:-5.142857/5.0 Difference:-10.142857
 adding thread pub-27
-Publisher Stack size28
+Publisher Stack size: 28
 Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.8/10.0 Difference:-4.2
+AvgTPS/Reference:-5.6666665/5.0 Difference:-10.666666
 adding thread pub-28
-Publisher Stack size29
+Publisher Stack size: 29
 Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.75/10.0 Difference:-4.25
+AvgTPS/Reference:-6.5/5.0 Difference:-11.5
 adding thread pub-29
-Publisher Stack size30
+Publisher Stack size: 30
 Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.647059/10.0 Difference:-4.352941
+AvgTPS/Reference:-5.5/5.0 Difference:-10.5
 adding thread pub-30
-Publisher Stack size31
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.647059/10.0 Difference:-4.352941
-adding thread pub-31
-Publisher Stack size32
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.611111/10.0 Difference:-4.388889
-adding thread pub-32
-Publisher Stack size33
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.5882354/10.0 Difference:-4.4117646
-adding thread pub-33
-Publisher Stack size34
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.611111/10.0 Difference:-4.388889
-adding thread pub-34
-Publisher Stack size35
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.6666665/10.0 Difference:-4.3333335
-adding thread pub-35
-Publisher Stack size36
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.5882354/10.0 Difference:-4.4117646
-adding thread pub-36
-Publisher Stack size37
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.8333335/10.0 Difference:-4.1666665
-adding thread pub-37
-Publisher Stack size38
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.7647057/10.0 Difference:-4.2352943
-adding thread pub-38
-Publisher Stack size39
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.8235292/10.0 Difference:-4.1764708
-adding thread pub-39
-Publisher Stack size40
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.7777777/10.0 Difference:-4.2222223
-adding thread pub-40
-Publisher Stack size41
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:6.0/10.0 Difference:-4.0
-adding thread pub-41
-Publisher Stack size42
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.9444447/10.0 Difference:-4.0555553
-adding thread pub-42
-Publisher Stack size43
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.9411764/10.0 Difference:-4.0588236
-adding thread pub-43
-Publisher Stack size44
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:6.0/10.0 Difference:-4.0
-adding thread pub-44
-Publisher Stack size45
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:6.0/10.0 Difference:-4.0
-adding thread pub-45
-Publisher Stack size46
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.9444447/10.0 Difference:-4.0555553
-adding thread pub-46
-Publisher Stack size47
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:6.0588236/10.0 Difference:-3.9411764
-adding thread pub-47
-Publisher Stack size48
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:6.111111/10.0 Difference:-3.8888888
-adding thread pub-48
-Publisher Stack size49
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:6.0/10.0 Difference:-4.0
-adding thread pub-49
-Publisher Stack size50
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.7058825/10.0 Difference:-4.2941175
-adding thread pub-50
-Publisher Stack size51
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.6666665/10.0 Difference:-4.3333335
-adding thread pub-51
-Publisher Stack size52
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.647059/10.0 Difference:-4.352941
-adding thread pub-52
-Publisher Stack size53
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.611111/10.0 Difference:-4.388889
-adding thread pub-53
-Publisher Stack size54
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.388889/10.0 Difference:-4.611111
-adding thread pub-54
-Publisher Stack size55
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.2941175/10.0 Difference:-4.7058825
-adding thread pub-55
-Publisher Stack size56
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.4444447/10.0 Difference:-4.5555553
-adding thread pub-56
-Publisher Stack size57
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.4117646/10.0 Difference:-4.5882354
-adding thread pub-57
-Publisher Stack size58
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.4444447/10.0 Difference:-4.5555553
-adding thread pub-58
-Publisher Stack size59
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.2777777/10.0 Difference:-4.7222223
-adding thread pub-59
-Publisher Stack size60
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.352941/10.0 Difference:-4.647059
-adding thread pub-60
-Publisher Stack size61
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.3333335/10.0 Difference:-4.6666665
-adding thread pub-61
-Publisher Stack size62
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.352941/10.0 Difference:-4.647059
-adding thread pub-62
-Publisher Stack size63
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.2777777/10.0 Difference:-4.7222223
-adding thread pub-63
-Publisher Stack size64
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:5.0/10.0 Difference:-5.0
-adding thread pub-64
-Publisher Stack size65
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.882353/10.0 Difference:-5.117647
-adding thread pub-65
-Publisher Stack size66
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.8333335/10.0 Difference:-5.1666665
-adding thread pub-66
-Publisher Stack size67
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.529412/10.0 Difference:-5.470588
-adding thread pub-67
-Publisher Stack size68
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.5555553/10.0 Difference:-5.4444447
-adding thread pub-68
-Publisher Stack size69
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.2777777/10.0 Difference:-5.7222223
-adding thread pub-69
-Publisher Stack size70
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.2352943/10.0 Difference:-5.7647057
-adding thread pub-70
-Publisher Stack size71
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.3333335/10.0 Difference:-5.6666665
-adding thread pub-71
-Publisher Stack size72
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.2941175/10.0 Difference:-5.7058825
-adding thread pub-72
-Publisher Stack size73
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.388889/10.0 Difference:-5.611111
-adding thread pub-73
-Publisher Stack size74
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.3333335/10.0 Difference:-5.6666665
-adding thread pub-74
-Publisher Stack size75
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.2941175/10.0 Difference:-5.7058825
-adding thread pub-75
-Publisher Stack size76
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.3333335/10.0 Difference:-5.6666665
-adding thread pub-76
-Publisher Stack size77
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.1764708/10.0 Difference:-5.8235292
-adding thread pub-77
-Publisher Stack size78
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.2352943/10.0 Difference:-5.7647057
-adding thread pub-78
-Publisher Stack size79
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.0555553/10.0 Difference:-5.9444447
-adding thread pub-79
-Publisher Stack size80
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.0/10.0 Difference:-6.0
-adding thread pub-80
-Publisher Stack size81
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.111111/10.0 Difference:-5.888889
-adding thread pub-81
-Publisher Stack size82
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.0588236/10.0 Difference:-5.9411764
-adding thread pub-82
-Publisher Stack size83
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.4117646/10.0 Difference:-5.5882354
-adding thread pub-83
-Publisher Stack size84
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.111111/10.0 Difference:-5.888889
-adding thread pub-84
-Publisher Stack size85
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.8823528/10.0 Difference:-6.117647
-adding thread pub-85
-Publisher Stack size86
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.0555553/10.0 Difference:-5.9444447
-adding thread pub-86
-Publisher Stack size87
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.9411764/10.0 Difference:-6.0588236
-adding thread pub-87
-Publisher Stack size88
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.0588236/10.0 Difference:-5.9411764
-adding thread pub-88
-Publisher Stack size89
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.4444444/10.0 Difference:-6.5555553
-adding thread pub-89
-Publisher Stack size90
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.3529413/10.0 Difference:-6.6470585
-adding thread pub-90
-Publisher Stack size91
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.3333333/10.0 Difference:-6.666667
-adding thread pub-91
-Publisher Stack size92
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.2941177/10.0 Difference:-6.705882
-adding thread pub-92
-Publisher Stack size93
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.6470587/10.0 Difference:-6.3529415
-adding thread pub-93
-Publisher Stack size94
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.6470587/10.0 Difference:-6.3529415
-adding thread pub-94
-Publisher Stack size95
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.625/10.0 Difference:-6.375
-adding thread pub-95
-Publisher Stack size96
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.7058823/10.0 Difference:-6.294118
-adding thread pub-96
-Publisher Stack size97
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.8235295/10.0 Difference:-6.1764708
-adding thread pub-97
-Publisher Stack size98
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.0/10.0 Difference:-6.0
-adding thread pub-98
-Publisher Stack size99
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.6470587/10.0 Difference:-6.3529415
-adding thread pub-99
-Publisher Stack size100
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.5/10.0 Difference:-6.5
-adding thread pub-100
-Publisher Stack size101
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.5882354/10.0 Difference:-6.4117646
-adding thread pub-101
-Publisher Stack size102
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.4705882/10.0 Difference:-6.529412
-adding thread pub-102
-Publisher Stack size103
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.4375/10.0 Difference:-6.5625
-adding thread pub-103
-Publisher Stack size104
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.3529413/10.0 Difference:-6.6470585
-adding thread pub-104
-Publisher Stack size105
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.25/10.0 Difference:-6.75
-adding thread pub-105
-Publisher Stack size106
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.3529413/10.0 Difference:-6.6470585
-adding thread pub-106
-Publisher Stack size107
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.1764705/10.0 Difference:-6.8235292
-adding thread pub-107
-Publisher Stack size108
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.3125/10.0 Difference:-6.6875
-adding thread pub-108
-Publisher Stack size109
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.3125/10.0 Difference:-6.6875
-adding thread pub-109
-Publisher Stack size110
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.1333334/10.0 Difference:-6.866667
-adding thread pub-110
-Publisher Stack size111
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.3125/10.0 Difference:-6.6875
-adding thread pub-111
-Publisher Stack size112
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.1875/10.0 Difference:-6.8125
-adding thread pub-112
-Publisher Stack size113
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.4666667/10.0 Difference:-6.5333333
-adding thread pub-113
-Publisher Stack size114
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.1875/10.0 Difference:-6.8125
-adding thread pub-114
-Publisher Stack size115
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.9333334/10.0 Difference:-7.0666666
-adding thread pub-115
-Publisher Stack size116
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.875/10.0 Difference:-7.125
-adding thread pub-116
-Publisher Stack size117
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.9375/10.0 Difference:-7.0625
-adding thread pub-117
-Publisher Stack size118
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.6/10.0 Difference:-6.4
-adding thread pub-118
-Publisher Stack size119
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.8125/10.0 Difference:-6.1875
-adding thread pub-119
-Publisher Stack size120
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.8666666/10.0 Difference:-6.133333
-adding thread pub-120
-Publisher Stack size121
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.9375/10.0 Difference:-6.0625
-adding thread pub-121
-Publisher Stack size122
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.9375/10.0 Difference:-6.0625
-adding thread pub-122
-Publisher Stack size123
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.9375/10.0 Difference:-6.0625
-adding thread pub-123
-Publisher Stack size124
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.9375/10.0 Difference:-6.0625
-adding thread pub-124
-Publisher Stack size125
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.8666666/10.0 Difference:-6.133333
-adding thread pub-125
-Publisher Stack size126
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.7333333/10.0 Difference:-6.2666664
-adding thread pub-126
-Publisher Stack size127
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.75/10.0 Difference:-6.25
-adding thread pub-127
-Publisher Stack size128
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.133333/10.0 Difference:-5.866667
-adding thread pub-128
-Publisher Stack size129
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.75/10.0 Difference:-6.25
-adding thread pub-129
-Publisher Stack size130
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.6666667/10.0 Difference:-6.333333
-adding thread pub-130
-Publisher Stack size131
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.6666667/10.0 Difference:-6.333333
-adding thread pub-131
-Publisher Stack size132
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.8125/10.0 Difference:-6.1875
-adding thread pub-132
-Publisher Stack size133
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.9333334/10.0 Difference:-6.0666666
-adding thread pub-133
-Publisher Stack size134
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.5/10.0 Difference:-6.5
-adding thread pub-134
-Publisher Stack size135
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.5625/10.0 Difference:-6.4375
-adding thread pub-135
-Publisher Stack size136
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.7333333/10.0 Difference:-6.2666664
-adding thread pub-136
-Publisher Stack size137
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.8125/10.0 Difference:-6.1875
-adding thread pub-137
-Publisher Stack size138
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.8125/10.0 Difference:-6.1875
-adding thread pub-138
-Publisher Stack size139
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.6470587/10.0 Difference:-6.3529415
-adding thread pub-139
-Publisher Stack size140
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.5882354/10.0 Difference:-6.4117646
-adding thread pub-140
-Publisher Stack size141
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.5/10.0 Difference:-6.5
-adding thread pub-141
-Publisher Stack size142
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.5882354/10.0 Difference:-6.4117646
-adding thread pub-142
-Publisher Stack size143
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.875/10.0 Difference:-6.125
-adding thread pub-143
-Publisher Stack size144
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.7058823/10.0 Difference:-6.294118
-adding thread pub-144
-Publisher Stack size145
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.9411764/10.0 Difference:-6.0588236
-adding thread pub-145
-Publisher Stack size146
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.875/10.0 Difference:-6.125
-adding thread pub-146
-Publisher Stack size147
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.9411764/10.0 Difference:-6.0588236
-adding thread pub-147
-Publisher Stack size148
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.75/10.0 Difference:-6.25
-adding thread pub-148
-Publisher Stack size149
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.5882354/10.0 Difference:-6.4117646
-adding thread pub-149
-Publisher Stack size150
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.5882354/10.0 Difference:-6.4117646
-adding thread pub-150
-Publisher Stack size151
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.375/10.0 Difference:-6.625
-adding thread pub-151
-Publisher Stack size152
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.4705882/10.0 Difference:-6.529412
-adding thread pub-152
-Publisher Stack size153
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.4705882/10.0 Difference:-6.529412
-adding thread pub-153
-Publisher Stack size154
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.4444444/10.0 Difference:-6.5555553
-adding thread pub-154
-Publisher Stack size155
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.4444444/10.0 Difference:-6.5555553
-adding thread pub-155
-Publisher Stack size156
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.4117646/10.0 Difference:-6.5882354
-adding thread pub-156
-Publisher Stack size157
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.5555556/10.0 Difference:-6.4444447
-adding thread pub-157
-Publisher Stack size158
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.8823528/10.0 Difference:-6.117647
-adding thread pub-158
-Publisher Stack size159
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.2222223/10.0 Difference:-5.7777777
-adding thread pub-159
-Publisher Stack size160
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.8333333/10.0 Difference:-6.166667
-adding thread pub-160
-Publisher Stack size161
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.7058823/10.0 Difference:-6.294118
-adding thread pub-161
-Publisher Stack size162
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.6666667/10.0 Difference:-6.333333
-adding thread pub-162
-Publisher Stack size163
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.0588236/10.0 Difference:-5.9411764
-adding thread pub-163
-Publisher Stack size164
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:4.117647/10.0 Difference:-5.882353
-adding thread pub-164
-Publisher Stack size165
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.5555556/10.0 Difference:-6.4444447
-adding thread pub-165
-Publisher Stack size166
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.4705882/10.0 Difference:-6.529412
-adding thread pub-166
-Publisher Stack size167
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.3888888/10.0 Difference:-6.611111
-adding thread pub-167
-Publisher Stack size168
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.5294118/10.0 Difference:-6.470588
-adding thread pub-168
-Publisher Stack size169
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.2941177/10.0 Difference:-6.705882
-adding thread pub-169
-Publisher Stack size170
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.1666667/10.0 Difference:-6.833333
-adding thread pub-170
-Publisher Stack size171
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.0588236/10.0 Difference:-6.9411764
-adding thread pub-171
-Publisher Stack size172
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.3333333/10.0 Difference:-6.666667
-adding thread pub-172
-Publisher Stack size173
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.4705882/10.0 Difference:-6.529412
-adding thread pub-173
-Publisher Stack size174
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.4705882/10.0 Difference:-6.529412
-adding thread pub-174
-Publisher Stack size175
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.8888888/10.0 Difference:-7.111111
-adding thread pub-175
-Publisher Stack size176
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.764706/10.0 Difference:-7.2352943
-adding thread pub-176
-Publisher Stack size177
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.8888888/10.0 Difference:-7.111111
-adding thread pub-177
-Publisher Stack size178
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.0/10.0 Difference:-7.0
-adding thread pub-178
-Publisher Stack size179
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.8823528/10.0 Difference:-7.117647
-adding thread pub-179
-Publisher Stack size180
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.8823528/10.0 Difference:-7.117647
-adding thread pub-180
-Publisher Stack size181
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.75/10.0 Difference:-7.25
-adding thread pub-181
-Publisher Stack size182
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.0588236/10.0 Difference:-6.9411764
-adding thread pub-182
-Publisher Stack size183
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.0625/10.0 Difference:-6.9375
-adding thread pub-183
-Publisher Stack size184
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.875/10.0 Difference:-7.125
-adding thread pub-184
-Publisher Stack size185
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.5882354/10.0 Difference:-7.4117646
-adding thread pub-185
-Publisher Stack size186
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.375/10.0 Difference:-7.625
-adding thread pub-186
-Publisher Stack size187
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.7058823/10.0 Difference:-7.294118
-adding thread pub-187
-Publisher Stack size188
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.2941177/10.0 Difference:-7.705882
-adding thread pub-188
-Publisher Stack size189
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.625/10.0 Difference:-7.375
-adding thread pub-189
-Publisher Stack size190
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.4117646/10.0 Difference:-7.5882354
-adding thread pub-190
-Publisher Stack size191
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.375/10.0 Difference:-7.625
-adding thread pub-191
-Publisher Stack size192
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.4117646/10.0 Difference:-7.5882354
-adding thread pub-192
-Publisher Stack size193
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.2941177/10.0 Difference:-7.705882
-adding thread pub-193
-Publisher Stack size194
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.8125/10.0 Difference:-7.1875
-adding thread pub-194
-Publisher Stack size195
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.5294118/10.0 Difference:-7.470588
-adding thread pub-195
-Publisher Stack size196
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.5625/10.0 Difference:-7.4375
-adding thread pub-196
-Publisher Stack size197
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.9411764/10.0 Difference:-7.0588236
-adding thread pub-197
-Publisher Stack size198
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.235294/10.0 Difference:-6.7647057
-adding thread pub-198
-Publisher Stack size199
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.375/10.0 Difference:-6.625
-adding thread pub-199
-Publisher Stack size200
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.2941177/10.0 Difference:-6.705882
-adding thread pub-200
-Publisher Stack size201
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.0/10.0 Difference:-7.0
-adding thread pub-201
-Publisher Stack size202
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.0588236/10.0 Difference:-6.9411764
-adding thread pub-202
-Publisher Stack size203
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.9411764/10.0 Difference:-7.0588236
-adding thread pub-203
-Publisher Stack size204
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.5625/10.0 Difference:-6.4375
-adding thread pub-204
-Publisher Stack size205
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.235294/10.0 Difference:-6.7647057
-adding thread pub-205
-Publisher Stack size206
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.125/10.0 Difference:-6.875
-adding thread pub-206
-Publisher Stack size207
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.1764705/10.0 Difference:-6.8235292
-adding thread pub-207
-Publisher Stack size208
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.2941177/10.0 Difference:-6.705882
-adding thread pub-208
-Publisher Stack size209
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.2941177/10.0 Difference:-6.705882
-adding thread pub-209
-Publisher Stack size210
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.5/10.0 Difference:-6.5
-adding thread pub-210
-Publisher Stack size211
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.235294/10.0 Difference:-6.7647057
-adding thread pub-211
-Publisher Stack size212
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.1666667/10.0 Difference:-6.833333
-adding thread pub-212
-Publisher Stack size213
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.1111112/10.0 Difference:-6.888889
-adding thread pub-213
-Publisher Stack size214
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.4117646/10.0 Difference:-6.5882354
-adding thread pub-214
-Publisher Stack size215
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.2777777/10.0 Difference:-6.7222223
-adding thread pub-215
-Publisher Stack size216
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.0/10.0 Difference:-7.0
-adding thread pub-216
-Publisher Stack size217
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.1176472/10.0 Difference:-6.882353
-adding thread pub-217
-Publisher Stack size218
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.2777777/10.0 Difference:-6.7222223
-adding thread pub-218
-Publisher Stack size219
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.5294118/10.0 Difference:-6.470588
-adding thread pub-219
-Publisher Stack size220
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.2222223/10.0 Difference:-6.7777777
-adding thread pub-220
-Publisher Stack size221
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.235294/10.0 Difference:-6.7647057
-adding thread pub-221
-Publisher Stack size222
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.235294/10.0 Difference:-6.7647057
-adding thread pub-222
-Publisher Stack size223
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.3888888/10.0 Difference:-6.611111
-adding thread pub-223
-Publisher Stack size224
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.7058823/10.0 Difference:-6.294118
-adding thread pub-224
-Publisher Stack size225
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.6111112/10.0 Difference:-6.388889
-adding thread pub-225
-Publisher Stack size226
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.2941177/10.0 Difference:-6.705882
-adding thread pub-226
-Publisher Stack size227
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.1764705/10.0 Difference:-6.8235292
-adding thread pub-227
-Publisher Stack size228
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.2777777/10.0 Difference:-6.7222223
-adding thread pub-228
-Publisher Stack size229
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.3529413/10.0 Difference:-6.6470585
-adding thread pub-229
-Publisher Stack size230
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.2777777/10.0 Difference:-6.7222223
-adding thread pub-230
-Publisher Stack size231
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.1666667/10.0 Difference:-6.833333
-adding thread pub-231
-Publisher Stack size232
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.1176472/10.0 Difference:-6.882353
-adding thread pub-232
-Publisher Stack size233
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.2777777/10.0 Difference:-6.7222223
-adding thread pub-233
-Publisher Stack size234
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.5882354/10.0 Difference:-6.4117646
-adding thread pub-234
-Publisher Stack size235
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.5882354/10.0 Difference:-6.4117646
-adding thread pub-235
-Publisher Stack size236
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.6470587/10.0 Difference:-6.3529415
-adding thread pub-236
-Publisher Stack size237
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.5625/10.0 Difference:-6.4375
-adding thread pub-237
-Publisher Stack size238
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.6470587/10.0 Difference:-6.3529415
-adding thread pub-238
-Publisher Stack size239
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.4375/10.0 Difference:-6.5625
-adding thread pub-239
-Publisher Stack size240
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.3529413/10.0 Difference:-6.6470585
-adding thread pub-240
-Publisher Stack size241
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.5294118/10.0 Difference:-6.470588
-adding thread pub-241
-Publisher Stack size242
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.6875/10.0 Difference:-6.3125
-adding thread pub-242
-Publisher Stack size243
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.7058823/10.0 Difference:-6.294118
-adding thread pub-243
-Publisher Stack size244
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.875/10.0 Difference:-6.125
-adding thread pub-244
-Publisher Stack size245
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.5882354/10.0 Difference:-6.4117646
-adding thread pub-245
-Publisher Stack size246
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.4705882/10.0 Difference:-6.529412
-adding thread pub-246
-Publisher Stack size247
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.3125/10.0 Difference:-6.6875
-adding thread pub-247
-Publisher Stack size248
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.3529413/10.0 Difference:-6.6470585
-adding thread pub-248
-Publisher Stack size249
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.6875/10.0 Difference:-6.3125
-adding thread pub-249
-Publisher Stack size250
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.7058823/10.0 Difference:-6.294118
-adding thread pub-250
-Publisher Stack size251
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.4705882/10.0 Difference:-6.529412
-adding thread pub-251
-Publisher Stack size252
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.3125/10.0 Difference:-6.6875
-adding thread pub-252
-Publisher Stack size253
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.2941177/10.0 Difference:-6.705882
-adding thread pub-253
-Publisher Stack size254
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.375/10.0 Difference:-6.625
-adding thread pub-254
-Publisher Stack size255
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.5294118/10.0 Difference:-6.470588
-adding thread pub-255
-Publisher Stack size256
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.1764705/10.0 Difference:-6.8235292
-adding thread pub-256
-Publisher Stack size257
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:3.0625/10.0 Difference:-6.9375
-adding thread pub-257
-Publisher Stack size258
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.5882354/10.0 Difference:-7.4117646
-adding thread pub-258
-Publisher Stack size259
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.625/10.0 Difference:-7.375
-adding thread pub-259
-Publisher Stack size260
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.8125/10.0 Difference:-7.1875
-adding thread pub-260
-Publisher Stack size261
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.1764705/10.0 Difference:-7.8235292
-adding thread pub-261
-Publisher Stack size262
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:1.9375/10.0 Difference:-8.0625
-adding thread pub-262
-Publisher Stack size263
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.1176472/10.0 Difference:-7.882353
-adding thread pub-263
-Publisher Stack size264
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.1176472/10.0 Difference:-7.882353
-adding thread pub-264
-Publisher Stack size265
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.0588236/10.0 Difference:-7.9411764
-adding thread pub-265
-Publisher Stack size266
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.0555556/10.0 Difference:-7.9444447
-adding thread pub-266
-Publisher Stack size267
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:1.882353/10.0 Difference:-8.117647
-adding thread pub-267
-Publisher Stack size268
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.0555556/10.0 Difference:-7.9444447
-adding thread pub-268
-Publisher Stack size269
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.0588236/10.0 Difference:-7.9411764
-adding thread pub-269
-Publisher Stack size270
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.0/10.0 Difference:-8.0
-adding thread pub-270
-Publisher Stack size271
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.0/10.0 Difference:-8.0
-adding thread pub-271
-Publisher Stack size272
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:1.875/10.0 Difference:-8.125
-adding thread pub-272
-Publisher Stack size273
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:1.882353/10.0 Difference:-8.117647
-adding thread pub-273
-Publisher Stack size274
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.0625/10.0 Difference:-7.9375
-adding thread pub-274
-Publisher Stack size275
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.125/10.0 Difference:-7.875
-adding thread pub-275
-Publisher Stack size276
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.235294/10.0 Difference:-7.7647057
-adding thread pub-276
-Publisher Stack size277
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.125/10.0 Difference:-7.875
-adding thread pub-277
-Publisher Stack size278
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.1176472/10.0 Difference:-7.882353
-adding thread pub-278
-Publisher Stack size279
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.1764705/10.0 Difference:-7.8235292
-adding thread pub-279
-Publisher Stack size280
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:2.25/10.0 Difference:-7.75
-adding thread pub-280
-Publisher Stack size281
-Too much low TPS increasing one Thread...
-AvgTPS/Reference:1.9411764/10.0 Difference:-8.058824
-adding thread pub-281
-Publisher Stack size282
-Too much low TPS increasing one Thread...
+Publisher Stack size: 31
+Too much low TPS increasing one Thread...
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN
+AvgTPS/Reference:NaN/5.0 Difference:NaN

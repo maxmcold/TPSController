@@ -1,5 +1,7 @@
 package com.mdv.throttle;
 
+import com.mdv.logging.Logger;
+import com.mdv.time.Timer;
 import com.mdv.utils.FilePopper;
 
 import java.io.*;
@@ -16,7 +18,9 @@ public class Speedmeter implements Runnable{
     File measure;
     private Thread t;
     PrintWriter out;
-    PrintWriter log;
+
+    Logger logger = new Logger();
+    Timer timer = Timer.getTimer();
 
     public Speedmeter()  {
 
@@ -41,13 +45,8 @@ public class Speedmeter implements Runnable{
                 String out = sdf.format(resultDate);*/
 
 
-                Calendar c = Calendar.getInstance();
-                c.setTimeInMillis(System.currentTimeMillis());
 
-                String date = c.get(Calendar.YEAR)+"-"+c.get(Calendar.MONTH)+"-"+c.get(Calendar.DAY_OF_MONTH);
-                String time = c.get(Calendar.HOUR_OF_DAY)+":"+c.get(Calendar.MINUTE)+":"+c.get(Calendar.SECOND);
-
-                String ms = date + " " + time + " " + Configuration.DEF_STRING_TOKEN + count + "\n";
+                String ms = timer.getFormettedDateTime() + " " + Configuration.DEF_STRING_TOKEN + count + "\n";
 
                 // Metering file cannot grow forever. Thus use circular writing
                 //get current number of lines
@@ -56,10 +55,11 @@ public class Speedmeter implements Runnable{
 
                 //if not max number append, otherwise pop
                 if (lnr.getLineNumber() >= Configuration.MAX_MEASURE_DEPTH){
-                    ///too much lines in the file, writer from the beginning
+                    ///too much lines in the file, pop a line and then add the last
                     new FilePopper().popLine(ms,Configuration.MEASURE_FILE);
 
                 }else{
+                    //not yet max numbers, append the line
                     new FilePopper().appendline(ms,Configuration.MEASURE_FILE);
 
                 }
