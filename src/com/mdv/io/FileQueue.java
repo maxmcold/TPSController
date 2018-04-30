@@ -2,11 +2,15 @@ package com.mdv.io;
 
 import com.mdv.data.Message;
 import com.mdv.io.Queue;
+import com.mdv.logging.Logger;
 import com.mdv.throttle.Configuration;
 
 import java.io.*;
 
 public class FileQueue implements Queue {
+    //hardcoded for file queue
+    int limit = Configuration.QUEUE_LIMIT;
+    Logger logger = new Logger();
 
     @Override
     public synchronized void popMessage() throws IOException{
@@ -64,6 +68,26 @@ public class FileQueue implements Queue {
         PrintWriter writer = new PrintWriter(Configuration.IO_FILE);
         writer.print("");
         writer.close();
+    }
+    @Override
+    public int getLimit(){
+        return this.limit;
+
+    }
+    @Override
+    public int getCurrentSize(){
+        int out =0;
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(Configuration.IO_FILE));
+            while(null != br.readLine()) out++;
+
+        } catch (FileNotFoundException e) {
+            logger.log(e.getMessage());
+        } catch (IOException e) {
+            logger.log(e.getMessage());
+        }
+        return out;
+
     }
 
 }

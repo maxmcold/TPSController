@@ -1,6 +1,10 @@
 package com.mdv.throttle;
 
+import java.util.Stack;
+
 public interface Controllable {
-    public boolean increase();
-    public boolean decrease();
+    boolean increase();
+    boolean decrease();
+    void setRule(RuleEngine re);
+    Stack<Publisher> getPublishers();
 }

@@ -1,20 +1,40 @@
-package com.mdv.test;
+package com.mdv.throttle;
 
 import com.mdv.io.FileQueue;
 import com.mdv.logging.Logger;
+import com.mdv.throttle.Configuration;
 import com.mdv.throttle.Controllable;
+import com.mdv.throttle.Publisher;
+import com.mdv.throttle.RuleEngine;
 
 import java.util.Stack;
 import java.util.StringTokenizer;
 
 public class BulkPublisher extends Thread implements Controllable {
+
     Logger logger = new Logger();
     private static Stack<Publisher> publishers = new Stack();
     private FileQueue fq;
     int bulkInit = 10; //default
+    RuleEngine rule;
     public BulkPublisher(int bi){
         this.setDaemon(true);
         this.bulkInit = bi;
+
+        //set the default rule from configuration
+        try {
+            Class<?> cls = Class.forName(Configuration.RULE);
+            this.rule = (RuleEngine)cls.newInstance();
+
+
+        } catch (ClassNotFoundException e) {
+           logger.log(e.getMessage());
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override
@@ -30,15 +50,25 @@ public class BulkPublisher extends Thread implements Controllable {
 
 
     }
+
     @Override
     public boolean increase(){
-        return this.addPublisher();
+        this.addPublisher();
+        if(Configuration.PUBLISH_INTERVAL_MILLISEC > 100)
+        Configuration.PUBLISH_INTERVAL_MILLISEC -= 100;
+        logger.log("Decreased publish interval by 100 ms, current: "+ Configuration.PUBLISH_INTERVAL_MILLISEC);
+        return true;
     }
 
     @Override
     public boolean decrease() {
-        return this.popPublisher();
+        this.popPublisher();
+        Configuration.PUBLISH_INTERVAL_MILLISEC += 100;
+        logger.log("Increased publish interval by 100 ms, current" + Configuration.PUBLISH_INTERVAL_MILLISEC);
+        return true;
     }
+
+
 
     public boolean popPublisher(){
         if (publishers.empty()) return false;
@@ -84,6 +114,10 @@ public class BulkPublisher extends Thread implements Controllable {
 
 
 
+
+    }
+    public void setRule(RuleEngine ruleEngine){
+        this.rule = ruleEngine;
 
     }
 }

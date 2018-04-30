@@ -1,4 +1,4 @@
-package com.mdv.test;
+package com.mdv.throttle;
 
 
 import com.mdv.data.Message;
@@ -34,6 +34,7 @@ public class Publisher implements Runnable{
     public String getName(){
         return this.threadName;
     }
+
     public void run() {
 
          try {
@@ -51,12 +52,25 @@ public class Publisher implements Runnable{
          }
 
     }
+    public void sleep(long millisec){
+        try {
+            Thread.sleep(millisec);
+        } catch (InterruptedException e) {
+            logger.log(e.getMessage());
+        }
+    }
+    public boolean isActive(){
+        return this.exec;
+    }
     private synchronized void writeLine() throws IOException {
 
         this.queue.pushMessage(Message.getMessage(threadName,true));
 
 
 
+    }
+    public void reStart(){
+        this.exec = true;
     }
 
     public void start () {

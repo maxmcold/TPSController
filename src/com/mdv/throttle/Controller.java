@@ -1,9 +1,12 @@
 package com.mdv.throttle;
 
+import com.mdv.io.Queue;
 import com.mdv.logging.Logger;
 
 import java.io.*;
 import java.text.ParseException;
+import java.util.Iterator;
+import java.util.Stack;
 
 public class Controller implements Runnable {
 
@@ -12,8 +15,10 @@ public class Controller implements Runnable {
     private Speedmeter sm;
     private Controllable controllable;
     Logger logger = new Logger();
+    private Queue queue;
 
-    public Controller(Speedmeter speedmeter,Controllable bp) {
+
+    public Controller(Speedmeter speedmeter,Controllable bp, Queue q) {
 
         try {
             this.init();
@@ -23,6 +28,7 @@ public class Controller implements Runnable {
 
         this.sm = speedmeter;
         this.controllable = bp;
+        this.queue = q;
 
 
     }
@@ -56,7 +62,7 @@ public class Controller implements Runnable {
 
                 PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(Configuration.AVG_SPEED_LOG_FILE,true)), true);
                 float sum = 0;
-                int countAvgItems = 0;
+                int countAvgItems = 1;
                 for (int i =0; i < tpsArray.length ; i++){
 
                     if (tpsArray[i] != 0) {
@@ -77,16 +83,35 @@ public class Controller implements Runnable {
                 logger.log("AvgTPS/Reference:"+avg+"/"+Configuration.REFERENCE_TPS+ " Difference:" + diff);
 
 
-                //TODO: the most simple algorithm for now: add/remove one publisher
-                if (diff > 0 && diff > Configuration.DIFF_TOLERANCE) { //too high TPS
+                if (diff > 0 ) { //too high TPS
                     this.controllable.decrease();
-                    logger.log("Too much hig TPS decreasing one Thread...");
+                    //logger.log("Too much hig TPS decreasing one Thread...");
 
                 }
                 if (diff < 0 && -diff > Configuration.DIFF_TOLERANCE) { //too high TPS
                     this.controllable.increase();
-                    logger.log("Too much low TPS increasing one Thread...");
+                    //logger.log("Too much low TPS increasing one Thread...");
 
+                }
+
+                //Are you closer to queue limit?
+
+                Stack<Publisher> stack = this.controllable.getPublishers();
+                Iterator<Publisher> iterator = stack.iterator();
+                Publisher tmpPub;
+                while (iterator.hasNext()) {
+                    tmpPub = iterator.next();
+                    if (this.queue.getCurrentSize() >= this.queue.getLimit() * 0.8) {
+                        logger.log("Getting closer to queue limit: sleeping thread "+tmpPub.getName()+" | currentSize:"+  this.queue.getCurrentSize());
+                       tmpPub.stop();
+                    } else { //we are safe: restart all threads
+                        if (!tmpPub.isActive()) {
+                            logger.log("safe queue size: restarting thread " + tmpPub.getName() + " | currentSize:" + this.queue.getCurrentSize());
+                            tmpPub.start();
+                        }
+
+
+                    }
                 }
 
 

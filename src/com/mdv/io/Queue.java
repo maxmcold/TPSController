@@ -7,4 +7,6 @@ public interface Queue {
     void getMessage() throws IOException;
     void pushMessage(String message) throws IOException;
     void clean() throws IOException;
+    int getLimit();
+    int getCurrentSize();
 }
