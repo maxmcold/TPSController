@@ -1,7 +1,6 @@
 package com.mdv.test;
 
 import com.mdv.io.FileQueue;
-import com.mdv.throttle.BulkPublisher;
 import com.mdv.throttle.Controller;
 import com.mdv.throttle.Speedmeter;
 
@@ -14,9 +13,10 @@ public class TPSControllerTest {
     }
 
     public static void main(String args[]){
+        FileQueue fq = new FileQueue();
 
 
-        Speedmeter sm = new Speedmeter();
+        Speedmeter sm = new Speedmeter(fq);
         sm.start();
 
         BulkPublisher bp = new BulkPublisher(1);
@@ -25,7 +25,7 @@ public class TPSControllerTest {
 
         BulkSubscriber bs = new BulkSubscriber(1);
         bs.start();
-        Controller c = new Controller(sm,bp,new FileQueue());
+        Controller c = new Controller(sm,bp,fq);
         Thread t = new Thread(c);
         t.setDaemon(false);
         t.start();

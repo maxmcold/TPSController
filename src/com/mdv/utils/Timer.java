@@ -1,6 +1,4 @@
-package com.mdv.time;
-
-import com.mdv.throttle.Configuration;
+package com.mdv.utils;
 
 import java.util.Calendar;
 

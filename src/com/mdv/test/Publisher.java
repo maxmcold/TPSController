@@ -1,14 +1,15 @@
-package com.mdv.throttle;
+package com.mdv.test;
 
 
 import com.mdv.data.Message;
 import com.mdv.io.Queue;
 import com.mdv.logging.Logger;
 import com.mdv.throttle.Configuration;
+import com.mdv.throttle.Producer;
 
 import java.io.*;
 
-public class Publisher implements Runnable{
+public class Publisher implements Producer {
 
     private Thread t;
     private String threadName;
@@ -68,6 +69,10 @@ public class Publisher implements Runnable{
 
 
 
+    }
+
+    public void  setQueue(Queue q){
+        this.queue = q;
     }
     public void reStart(){
         this.exec = true;

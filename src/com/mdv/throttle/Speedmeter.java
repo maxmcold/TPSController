@@ -1,31 +1,47 @@
 package com.mdv.throttle;
 
+import com.mdv.io.Queue;
 import com.mdv.logging.Logger;
-import com.mdv.time.Timer;
+import com.mdv.utils.Timer;
 import com.mdv.utils.FilePopper;
+import sun.security.krb5.Config;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 import java.util.StringTokenizer;
 
 public class Speedmeter implements Runnable{
     File measure;
-    private Thread t;
-    PrintWriter out;
+    private Thread t;//PrintWriter out;
 
     Logger logger = new Logger();
     Timer timer = Timer.getTimer();
+    Queue queue;
 
-    public Speedmeter()  {
+    public Speedmeter(Queue q)  {
+        this.queue = q;
 
+        //hardcoded:write measure on file
         measure = new File(Configuration.MEASURE_FILE);
-        File bufferIO = new File(Configuration.IO_FILE);
+
+    }
+
+
+
+
+
+    /**
+     * Change the interval any queue measure is taken
+     * warning: will change the whole static Configuration value.
+     * @param interval
+     */
+
+    public void setMeasureIntervalMillisec(int interval){
+        Configuration.MEASURE_INTERVAL_MILLISEC = interval;
+
     }
 
     public void run() {
@@ -36,14 +52,8 @@ public class Speedmeter implements Runnable{
         while (true){
             try {
 
-                //counts the number of lines in the IO file
-                long count = Files.lines(Paths.get(Configuration.IO_FILE)).count();
-                String meter1 = Timer.getTimer().currentTimeMillisec();
-
-                /*SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy HH:mm");
-                Date resultDate = DateFormat.getInstance().parse(meter1);
-                String out = sdf.format(resultDate);*/
-
+                //gets current messages in queue
+                int count = this.queue.getCurrentSize();
 
 
                 String ms = timer.getFormettedDateTime() + " " + Configuration.DEF_STRING_TOKEN + count + "\n";
@@ -66,15 +76,20 @@ public class Speedmeter implements Runnable{
 
                 Thread.sleep(Configuration.MEASURE_INTERVAL_MILLISEC);
             } catch (IOException e) {
-                System.out.println(e.getMessage());
+                logger.log(e.getMessage());
             } catch (InterruptedException e) {
-                System.out.println(e.getMessage());
+                logger.log(e.getMessage());
             }
         }
 
     }
 
-
+    /**
+     *
+     * @return float array of transactions per second evaluated across subsequent queue size count at defined MEASURE interval
+     * @throws IOException
+     * @throws ParseException
+     */
 
     public float[] getCurrentTPS() throws IOException, ParseException {
 

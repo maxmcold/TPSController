@@ -2,6 +2,7 @@ package com.mdv.throttle;
 
 import com.mdv.io.Queue;
 import com.mdv.logging.Logger;
+import com.mdv.test.Publisher;
 
 import java.io.*;
 import java.text.ParseException;
@@ -18,6 +19,7 @@ public class Controller implements Runnable {
     private Queue queue;
 
 
+
     public Controller(Speedmeter speedmeter,Controllable bp, Queue q) {
 
         try {
@@ -32,6 +34,7 @@ public class Controller implements Runnable {
 
 
     }
+
 
     private float[] evaluateCurrentTPS() throws IOException {
         //the average speed is evaluated across 2 adiacent rows of the meter file. Thus total size is MAX_MEASURE_DEPTH-1
@@ -58,9 +61,7 @@ public class Controller implements Runnable {
                 float tpsArray[] = this.evaluateCurrentTPS();
 
 
-                //TODO: temporary code, find a way to log it somewhere else
 
-                PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(Configuration.AVG_SPEED_LOG_FILE,true)), true);
                 float sum = 0;
                 int countAvgItems = 1;
                 for (int i =0; i < tpsArray.length ; i++){
@@ -74,8 +75,6 @@ public class Controller implements Runnable {
                     //out.flush();
                 }
                 float avg = sum / countAvgItems;
-                out.print(" => avgTPS="+ avg + "\n");
-                out.close();
 
                 //TODO: for now check only average TPS
 
@@ -96,9 +95,9 @@ public class Controller implements Runnable {
 
                 //Are you closer to queue limit?
 
-                Stack<Publisher> stack = this.controllable.getPublishers();
-                Iterator<Publisher> iterator = stack.iterator();
-                Publisher tmpPub;
+                Stack<Producer> stack = this.controllable.getProducers();
+                Iterator<Producer> iterator = stack.iterator();
+                Producer tmpPub;
                 while (iterator.hasNext()) {
                     tmpPub = iterator.next();
                     if (this.queue.getCurrentSize() >= this.queue.getLimit() * 0.8) {
@@ -151,9 +150,6 @@ public class Controller implements Runnable {
         writer.print("");
         writer.close();
 
-        writer = new PrintWriter(Configuration.AVG_SPEED_LOG_FILE);
-        writer.print("");
-        writer.close();
 
 
 

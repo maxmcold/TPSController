@@ -1,10 +1,11 @@
-package com.mdv.throttle;
+package com.mdv.test;
 
 import com.mdv.io.FileQueue;
 import com.mdv.logging.Logger;
+import com.mdv.test.Publisher;
 import com.mdv.throttle.Configuration;
 import com.mdv.throttle.Controllable;
-import com.mdv.throttle.Publisher;
+import com.mdv.throttle.Producer;
 import com.mdv.throttle.RuleEngine;
 
 import java.util.Stack;
@@ -13,10 +14,11 @@ import java.util.StringTokenizer;
 public class BulkPublisher extends Thread implements Controllable {
 
     Logger logger = new Logger();
-    private static Stack<Publisher> publishers = new Stack();
+    private static Stack<Producer> publishers = new Stack();
     private FileQueue fq;
     int bulkInit = 10; //default
     RuleEngine rule;
+
     public BulkPublisher(int bi){
         this.setDaemon(true);
         this.bulkInit = bi;
@@ -70,22 +72,22 @@ public class BulkPublisher extends Thread implements Controllable {
 
 
 
-    public boolean popPublisher(){
+    private boolean popPublisher(){
         if (publishers.empty()) return false;
-        Publisher p = publishers.peek();
+        Producer p = publishers.peek();
         p.stop();
         publishers.pop();
         return true;
     }
-    public Stack<Publisher> getPublishers(){
+    public Stack<Producer> getProducers(){
         return publishers;
     }
 
-    public boolean addPublisher(){
+    private boolean addPublisher(){
 
         if (null == this.fq) this.fq = new FileQueue();
         //gets the last added index in the stack
-        Publisher p = (publishers.empty()) ? new Publisher("pub-1",fq) : publishers.peek();
+        Producer p = (publishers.empty()) ? new Publisher("pub-1",fq) : publishers.peek();
 
         //Evaluate the last index in the thread to create new one
         int nextToken;

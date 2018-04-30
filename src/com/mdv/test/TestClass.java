@@ -1,7 +1,6 @@
 package com.mdv.test;
 
 import com.mdv.io.FileQueue;
-import com.mdv.throttle.BulkPublisher;
 
 import java.io.IOException;
 

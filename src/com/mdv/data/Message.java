@@ -1,6 +1,6 @@
 package com.mdv.data;
 
-import com.mdv.time.Timer;
+import com.mdv.utils.Timer;
 
 public class Message {
 
