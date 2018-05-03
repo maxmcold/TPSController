@@ -1,23 +1,29 @@
 package com.mdv.test;
 
 import com.mdv.io.FileQueue;
-import com.mdv.throttle.BulkPublisher;
+import com.mdv.io.StdQueue;
 
 import java.io.IOException;
 
 public class TestClass {
 
     public static void main(String[] args){
-        FileQueue fq = new FileQueue();
+        StdQueue fq = StdQueue.getInstance();
+
+
+
         try {
-            fq.getMessage();
+            fq.pushMessage("Test message");
             fq.getCurrentSize();
+            fq.popMessage();
+            fq.getCurrentSize();
+            fq.popMessage();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        BulkPublisher bp = new BulkPublisher(1);
-        bp.increase();
+
 
 
 

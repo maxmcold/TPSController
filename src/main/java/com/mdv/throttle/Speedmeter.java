@@ -1,31 +1,47 @@
 package com.mdv.throttle;
 
+import com.mdv.io.Queue;
 import com.mdv.logging.Logger;
-import com.mdv.time.Timer;
+import com.mdv.utils.Timer;
 import com.mdv.utils.FilePopper;
+import sun.security.krb5.Config;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 import java.util.StringTokenizer;
 
 public class Speedmeter implements Runnable{
     File measure;
-    private Thread t;
-    PrintWriter out;
+    private Thread t;//PrintWriter out;
 
     Logger logger = new Logger();
     Timer timer = Timer.getTimer();
+    Queue queue;
 
-    public Speedmeter()  {
+    public Speedmeter(Queue q)  {
+        this.queue = q;
 
+        //hardcoded:write measure on file
         measure = new File(Configuration.MEASURE_FILE);
-        File bufferIO = new File(Configuration.IO_FILE);
+
+    }
+
+
+
+
+
+    /**
+     * Change the interval any queue measure is taken
+     * warning: will change the whole static Configuration value.
+     * @param interval
+     */
+
+    public void setMeasureIntervalMillisec(int interval){
+        Configuration.MEASURE_INTERVAL_MILLISEC = interval;
+
     }
 
     public void run() {
@@ -36,14 +52,8 @@ public class Speedmeter implements Runnable{
         while (true){
             try {
 
-                //counts the number of lines in the IO file
-                long count = Files.lines(Paths.get(Configuration.IO_FILE)).count();
-                String meter1 = Timer.getTimer().currentTimeMillisec();
-
-                /*SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy HH:mm");
-                Date resultDate = DateFormat.getInstance().parse(meter1);
-                String out = sdf.format(resultDate);*/
-
+                //gets current messages in queue
+                int count = this.queue.getCurrentSize();
 
 
                 String ms = timer.getFormettedDateTime() + " " + Configuration.DEF_STRING_TOKEN + count + "\n";
@@ -66,17 +76,22 @@ public class Speedmeter implements Runnable{
 
                 Thread.sleep(Configuration.MEASURE_INTERVAL_MILLISEC);
             } catch (IOException e) {
-                System.out.println(e.getMessage());
+                logger.log(e.getMessage());
             } catch (InterruptedException e) {
-                System.out.println(e.getMessage());
+                logger.log(e.getMessage());
             }
         }
 
     }
 
+    /**
+     *
+     * @return float array of transactions per second evaluated across subsequent queue size count at defined MEASURE interval
+     * @throws IOException
+     * @throws ParseException
+     */
 
-
-    public float[] getCurrentTPS() throws IOException, ParseException {
+    private synchronized float[] getCurrentTPSArray() throws IOException, ParseException {
 
         BufferedReader br = new BufferedReader(new FileReader(Configuration.MEASURE_FILE));
 
@@ -98,25 +113,27 @@ public class Speedmeter implements Runnable{
 
             //if another line read it to evaluate avg speed
 
-            if (( null != (s = br.readLine()))){
+            if (( null != (s = br.readLine()))) {
                 st = new StringTokenizer(s, Configuration.DEF_STRING_TOKEN);
-                String tmpToken =  st.nextToken();
-                Date date2 = format.parse(tmpToken);
+                if (st.hasMoreTokens()) {
+                    String tmpToken = st.nextToken();
+                    Date date2 = format.parse(tmpToken);
 
 
-                //long timestamp2 = (t1 != null) ? Long.parseLong(t1.trim()) : 0;
-                String t2 = st.nextToken();
-                long count2 = (t2 != null) ? Long.parseLong(t2.trim()) : 0;
-                //add avg speed to speed array
-                float dt =  date2.getTime() - date1.getTime(); // date difference in milliseconds
-                float dc = count2-count1; //evaluate the message count difference
-                ///protect from divide by zero error
-                avgSpeed[i++] = (dt == 0) ? 0 : (dc*1000)/dt;
-                //i++;
+                    //long timestamp2 = (t1 != null) ? Long.parseLong(t1.trim()) : 0;
+                    String t2 = st.nextToken();
+                    long count2 = (t2 != null) ? Long.parseLong(t2.trim()) : 0;
+                    //add avg speed to speed array
+                    float dt = date2.getTime() - date1.getTime(); // date difference in milliseconds
+                    float dc = count2 - count1; //evaluate the message count difference
+                    ///protect from divide by zero error
+                    avgSpeed[i++] = (dt == 0) ? 0 : (dc * 1000) / dt;
+                    //i++;
 
-                //go back to previous line
-                br.reset();
+                    //go back to previous line
+                    br.reset();
 
+                }
             }
 
 
@@ -128,6 +145,25 @@ public class Speedmeter implements Runnable{
         br.close();
 
         return avgSpeed;
+    }
+    public synchronized float getCurrentTPS() throws IOException,ParseException{
+
+        float[] tpsArray = this.getCurrentTPSArray();
+        float sum = 0;
+        int countAvgItems = 1;
+        for (int i =0; i < tpsArray.length ; i++){
+
+            if (tpsArray[i] != 0) {
+                sum += tpsArray[i];
+                countAvgItems++;
+            }
+
+            //out.append(String.valueOf(tpsArray[i]) + " ");
+            //out.flush();
+        }
+        float avg = sum / countAvgItems;
+        return avg;
+
     }
 
     public void start () {

@@ -1,14 +1,15 @@
-package com.mdv.throttle;
+package com.mdv.test;
 
 
 import com.mdv.data.Message;
 import com.mdv.io.Queue;
 import com.mdv.logging.Logger;
 import com.mdv.throttle.Configuration;
+import com.mdv.throttle.Producer;
 
 import java.io.*;
 
-public class Publisher implements Runnable{
+public class Publisher implements Producer, Runnable {
 
     private Thread t;
     private String threadName;
@@ -19,6 +20,8 @@ public class Publisher implements Runnable{
     Logger logger = new Logger();
     private Queue queue;
     private boolean exec = true;
+    int waitTime = Configuration.PUBLISH_INTERVAL_MILLISEC;
+
 
     public Publisher( String name, Queue q) {
         threadName = name;
@@ -34,6 +37,17 @@ public class Publisher implements Runnable{
     public String getName(){
         return this.threadName;
     }
+    public void slower(int millisec){
+        this.waitTime += millisec;
+
+
+    }
+    public void faster(int millisec){
+        if(this.waitTime > millisec)
+            this.waitTime -= millisec;
+
+    }
+
 
     public void run() {
 
@@ -42,7 +56,7 @@ public class Publisher implements Runnable{
             while(this.exec) {
                 this.writeLine();
 
-                Thread.sleep(Configuration.PUBLISH_INTERVAL_MILLISEC);
+                Thread.sleep(this.waitTime);
             }
 
         } catch (InterruptedException e) {
@@ -68,6 +82,10 @@ public class Publisher implements Runnable{
 
 
 
+    }
+
+    public void  setQueue(Queue q){
+        this.queue = q;
     }
     public void reStart(){
         this.exec = true;

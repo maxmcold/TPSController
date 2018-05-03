@@ -1,25 +1,29 @@
-package com.mdv.throttle;
+package com.mdv.test;
 
 import com.mdv.io.FileQueue;
+import com.mdv.io.Queue;
 import com.mdv.logging.Logger;
 import com.mdv.throttle.Configuration;
 import com.mdv.throttle.Controllable;
-import com.mdv.throttle.Publisher;
+import com.mdv.throttle.Producer;
 import com.mdv.throttle.RuleEngine;
 
+import java.util.Iterator;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
 public class BulkPublisher extends Thread implements Controllable {
 
     Logger logger = new Logger();
-    private static Stack<Publisher> publishers = new Stack();
-    private FileQueue fq;
+    private static Stack<Producer> publishers = new Stack();
+    private Queue queue;
     int bulkInit = 10; //default
     RuleEngine rule;
-    public BulkPublisher(int bi){
+
+    public BulkPublisher(int bi, Queue q){
         this.setDaemon(true);
         this.bulkInit = bi;
+        this.queue = q;
 
         //set the default rule from configuration
         try {
@@ -39,10 +43,9 @@ public class BulkPublisher extends Thread implements Controllable {
 
     @Override
     public void start(){
-        this.fq = new FileQueue();
         for (int i = 0; i < this.bulkInit; i++) {
 
-            Publisher p = new Publisher("pub-"+i,fq);
+            Publisher p = new Publisher("pub-"+i,queue);
             publishers.push(p);
             p.start();
 
@@ -53,39 +56,49 @@ public class BulkPublisher extends Thread implements Controllable {
 
     @Override
     public boolean increase(){
+        //add one publisher and reduce waiting interval of 5 millisec
         this.addPublisher();
-        if(Configuration.PUBLISH_INTERVAL_MILLISEC > 100)
-        Configuration.PUBLISH_INTERVAL_MILLISEC -= 100;
-        logger.log("Decreased publish interval by 100 ms, current: "+ Configuration.PUBLISH_INTERVAL_MILLISEC);
+        Iterator<Producer> iterator = this.publishers.iterator();
+        while (iterator.hasNext()) {
+            iterator.next().faster(5);
+
+        }
+        logger.log("Decreased publish interval by 10 ms, current: "+ Configuration.PUBLISH_INTERVAL_MILLISEC);
         return true;
     }
 
     @Override
     public boolean decrease() {
+        //remove one publisher and increase waiting interval of 5 millisec
+
         this.popPublisher();
-        Configuration.PUBLISH_INTERVAL_MILLISEC += 100;
-        logger.log("Increased publish interval by 100 ms, current" + Configuration.PUBLISH_INTERVAL_MILLISEC);
+        Iterator<Producer> iterator = this.publishers.iterator();
+        while (iterator.hasNext()) {
+            iterator.next().faster(5);
+
+        }
+        logger.log("Increased publish interval by 10 ms, current" + Configuration.PUBLISH_INTERVAL_MILLISEC);
         return true;
     }
 
 
 
-    public boolean popPublisher(){
+    private boolean popPublisher(){
         if (publishers.empty()) return false;
-        Publisher p = publishers.peek();
+        Producer p = publishers.peek();
         p.stop();
         publishers.pop();
         return true;
     }
-    public Stack<Publisher> getPublishers(){
+    public Stack<Producer> getProducers(){
         return publishers;
     }
 
-    public boolean addPublisher(){
+    private boolean addPublisher(){
 
-        if (null == this.fq) this.fq = new FileQueue();
+        //if (null == this.queue) this.fq = new FileQueue();
         //gets the last added index in the stack
-        Publisher p = (publishers.empty()) ? new Publisher("pub-1",fq) : publishers.peek();
+        Producer p = (publishers.empty()) ? new Publisher("pub-1",queue) : publishers.peek();
 
         //Evaluate the last index in the thread to create new one
         int nextToken;
@@ -96,7 +109,7 @@ public class BulkPublisher extends Thread implements Controllable {
             if (s != null) {
                 int lastToken = Integer.parseInt(s);
                 nextToken = ++lastToken;
-                Publisher publisher = new Publisher("pub-"+nextToken,fq);
+                Publisher publisher = new Publisher("pub-"+nextToken,queue);
                 publishers.push(publisher);
                 p.start();
 
