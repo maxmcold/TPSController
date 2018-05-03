@@ -24,8 +24,8 @@ public class Controller implements Runnable {
 
         try {
             this.init();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        } catch (IOException e) {
+            logger.log(e.getMessage());
         }
 
         this.sm = speedmeter;
@@ -35,65 +35,31 @@ public class Controller implements Runnable {
 
     }
 
-
-    private float[] evaluateCurrentTPS() throws IOException {
-        //the average speed is evaluated across 2 adiacent rows of the meter file. Thus total size is MAX_MEASURE_DEPTH-1
-        float[] avgSpeed = new float[Configuration.MAX_MEASURE_DEPTH-1];
-
-        try {
-             avgSpeed = this.sm.getCurrentTPS();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return avgSpeed;
-    }
-
-
-
-
-
-
-    @Override
     public void run() {
 
         while(true) {
 
-            //check is metering is running, if not create one
+            //check is metering is running, if not create one.
             if (null == this.sm) this.sm = new Speedmeter(this.queue);
 
             try {
-                float tpsArray[] = this.evaluateCurrentTPS();
 
 
-
-                float sum = 0;
-                int countAvgItems = 1;
-                for (int i =0; i < tpsArray.length ; i++){
-
-                    if (tpsArray[i] != 0) {
-                        sum += tpsArray[i];
-                        countAvgItems++;
-                    }
-
-                    //out.append(String.valueOf(tpsArray[i]) + " ");
-                    //out.flush();
-                }
-                float avg = sum / countAvgItems;
+                float avg = this.sm.getCurrentTPS();
 
                 //TODO: for now check only average TPS
 
-                float diff = avg-Configuration.REFERENCE_TPS;
-                logger.log("AvgTPS/Reference:"+avg+"/"+Configuration.REFERENCE_TPS+ " Difference:" + diff);
+                float diff = Configuration.REFERENCE_TPS-avg;
+
+                logger.log("AvgTPS/Reference:"+avg+" / "+Configuration.REFERENCE_TPS+ " Difference:" + diff);
 
 
-                if (diff > 0 ) { //too high TPS
-                    this.controllable.decrease();
-                    //logger.log("Too much hig TPS decreasing one Thread...");
+                if (diff > Configuration.DIFF_TOLERANCE ) { //too low TPS
+                    this.controllable.increase();
 
                 }
-                if (diff < 0 && -diff > Configuration.DIFF_TOLERANCE) { //too high TPS
-                    this.controllable.increase();
-                    //logger.log("Too much low TPS increasing one Thread...");
+                if (diff < 0) { //too high TPS
+                    this.controllable.decrease();
 
                 }
 
@@ -102,6 +68,7 @@ public class Controller implements Runnable {
                 Stack<Producer> stack = this.controllable.getProducers();
                 Iterator<Producer> iterator = stack.iterator();
                 Producer tmpPub;
+
                 while (iterator.hasNext()) {
                     tmpPub = iterator.next();
                     if (this.queue.getCurrentSize() >= this.queue.getLimit() * 0.8) {
@@ -129,9 +96,11 @@ public class Controller implements Runnable {
 
 
             } catch (IOException e) {
-                e.printStackTrace();
+                logger.log(e.getMessage());
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                logger.log(e.getMessage());
+            } catch (ParseException e) {
+                logger.log(e.getMessage());
             }
         }
 
@@ -149,12 +118,11 @@ public class Controller implements Runnable {
      * clean meter file
      *
      */
-    private void init() throws FileNotFoundException{
+    private void init() throws IOException{
         PrintWriter writer = new PrintWriter(Configuration.MEASURE_FILE);
         writer.print("");
         writer.close();
-
-
+        this.logger.clean();
 
 
     }

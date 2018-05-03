@@ -3,10 +3,10 @@ package com.mdv.throttle;
 public class Configuration {
 
     public static String IO_FILE = "./test.io.txt";
-    public static int PUBLISH_INTERVAL_MILLISEC = 10;
-    public static int SUBSCRIBE_INTERVAL_MILLISEC = 5;
-    public static int MEASURE_INTERVAL_MILLISEC = 5;
-    public static float REFERENCE_TPS = 200; //MAX ALLOWED TPS
+    public static int PUBLISH_INTERVAL_MILLISEC = 1000;
+    public static int SUBSCRIBE_INTERVAL_MILLISEC = 500;
+    public static int MEASURE_INTERVAL_MILLISEC = 500;
+    public static float REFERENCE_TPS = 10; //MAX ALLOWED TPS
     public static int CONTROL_INTERVAL = 30; //frequency of control check
     public static String MEASURE_FILE = "./meter.txt";
     public static String LOG_FILE = "./log.txt";

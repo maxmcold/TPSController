@@ -1,8 +1,8 @@
 package com.mdv.test;
 
 import com.mdv.io.FileQueue;
+import com.mdv.io.Queue;
 import com.mdv.logging.Logger;
-import com.mdv.test.Publisher;
 import com.mdv.throttle.Configuration;
 import com.mdv.throttle.Controllable;
 import com.mdv.throttle.Producer;
@@ -16,13 +16,14 @@ public class BulkPublisher extends Thread implements Controllable {
 
     Logger logger = new Logger();
     private static Stack<Producer> publishers = new Stack();
-    private FileQueue fq;
+    private Queue queue;
     int bulkInit = 10; //default
     RuleEngine rule;
 
-    public BulkPublisher(int bi){
+    public BulkPublisher(int bi, Queue q){
         this.setDaemon(true);
         this.bulkInit = bi;
+        this.queue = q;
 
         //set the default rule from configuration
         try {
@@ -42,10 +43,9 @@ public class BulkPublisher extends Thread implements Controllable {
 
     @Override
     public void start(){
-        this.fq = new FileQueue();
         for (int i = 0; i < this.bulkInit; i++) {
 
-            Publisher p = new Publisher("pub-"+i,fq);
+            Publisher p = new Publisher("pub-"+i,queue);
             publishers.push(p);
             p.start();
 
@@ -96,9 +96,9 @@ public class BulkPublisher extends Thread implements Controllable {
 
     private boolean addPublisher(){
 
-        if (null == this.fq) this.fq = new FileQueue();
+        //if (null == this.queue) this.fq = new FileQueue();
         //gets the last added index in the stack
-        Producer p = (publishers.empty()) ? new Publisher("pub-1",fq) : publishers.peek();
+        Producer p = (publishers.empty()) ? new Publisher("pub-1",queue) : publishers.peek();
 
         //Evaluate the last index in the thread to create new one
         int nextToken;
@@ -109,7 +109,7 @@ public class BulkPublisher extends Thread implements Controllable {
             if (s != null) {
                 int lastToken = Integer.parseInt(s);
                 nextToken = ++lastToken;
-                Publisher publisher = new Publisher("pub-"+nextToken,fq);
+                Publisher publisher = new Publisher("pub-"+nextToken,queue);
                 publishers.push(publisher);
                 p.start();
 

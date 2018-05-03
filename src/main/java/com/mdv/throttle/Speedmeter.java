@@ -91,7 +91,7 @@ public class Speedmeter implements Runnable{
      * @throws ParseException
      */
 
-    public synchronized float[] getCurrentTPS() throws IOException, ParseException {
+    private synchronized float[] getCurrentTPSArray() throws IOException, ParseException {
 
         BufferedReader br = new BufferedReader(new FileReader(Configuration.MEASURE_FILE));
 
@@ -145,6 +145,25 @@ public class Speedmeter implements Runnable{
         br.close();
 
         return avgSpeed;
+    }
+    public synchronized float getCurrentTPS() throws IOException,ParseException{
+
+        float[] tpsArray = this.getCurrentTPSArray();
+        float sum = 0;
+        int countAvgItems = 1;
+        for (int i =0; i < tpsArray.length ; i++){
+
+            if (tpsArray[i] != 0) {
+                sum += tpsArray[i];
+                countAvgItems++;
+            }
+
+            //out.append(String.valueOf(tpsArray[i]) + " ");
+            //out.flush();
+        }
+        float avg = sum / countAvgItems;
+        return avg;
+
     }
 
     public void start () {
